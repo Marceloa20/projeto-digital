@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1e5ce438fa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos/style.css">
+    <title>Estoque</title>
+</head>
+<body>
+    <h1>Estoque</h1>
+    <h2>Produtos</h2>
+    <div class="caixa-pesquisa">
+        <input class="caixa-txt" type="text" id="caixaPesquisa" placeholder="Digite o nome do produto">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <table class="table table-success table-striped">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+        </tr>
+        <tbody id="listaProdutos">
+
+        </tbody>
+    </table>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
