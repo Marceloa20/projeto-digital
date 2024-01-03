@@ -1,4 +1,4 @@
-var produtos = document.getElementById('listaProdutos')
+var produtos = document.getElementById('listaProdutos');
 
 window.addEventListener('load', carregarSite);
 
@@ -18,10 +18,29 @@ function listarProdutos() {
                 <td>${bebida.descricao}</td>
                 <td>${bebida.preco}</td>
                 <td>
-                    <i class="fa-solid fa-pen-to-square"></i>               
+                    <i class="fa-solid fa-pen-to-square" style='cursor: pointer'></i>               
                 </td>
-                <td><i class="fa-solid fa-trash-can"></i></td>
+                <td>
+                    <i class="fa-solid fa-trash-can" style='cursor: pointer'></i>
+                </td>
             </tr>`
         })
     }) 
 }
+
+// Funçao para exluir produtos quando clicar no ícone da lixeira
+
+// Adicionando evento de clique a tabela 
+listaProdutos.addEventListener('click', function(event) {
+    const elemnetoClicado = event.target;
+
+    //Verificando se o elemento clicado é ícone de lixeira 
+    if (elemnetoClicado.classList.contains('fa-trash-can')) {
+
+        //Acessando o elemento pai do ícone (o <td>) e depois o pai desse elemento (o <tr>)
+        const linhaParaExcluir = elemnetoClicado.parentNode.parentNode;
+
+        //Removendo a linha da tabela 
+        linhaParaExcluir.remove();
+    }
+});
